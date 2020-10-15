@@ -8,7 +8,6 @@ temp/
 *.log
 *.tmp
 debug.js
-README.md
 yarn.lock
 package-lock.json
 debug/
