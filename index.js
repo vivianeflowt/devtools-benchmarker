@@ -6,4 +6,6 @@
 
 const benchmarker = require('./src/benchmarker')
 
-module.exports.benchmarker = benchmarker
+module.exports.benchmarker = benchmarker.measure
+
+module.exports = benchmarker

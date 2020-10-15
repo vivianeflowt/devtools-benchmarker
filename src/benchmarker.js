@@ -4,29 +4,52 @@
  * Licensed under the MIT license.
  */
 
-const benchmarker = (somefunction, opt = {}) => {
+var measures = []
 
-  if (somefunction === undefined) {
-    return false
+var SETTINGS = {
+  PRECISION: 6
+}
+
+const clearMeasures = function () {
+  measures = []
+}
+
+const getMeasures = function () {
+  return measures
+}
+
+const setPrecision = function (value = 6) {
+  if (value >= 1) {
+    SETTINGS.PRECISION = value
   }
+}
 
-  opt.times = opt.times || 1
-  opt.precision = opt.precision || 8
+const getPrecision = function () {
+  return SETTINGS.PRECISION
+}
+
+const measure = function (somefunction = Function()) {
 
   const startAt = process.hrtime()
 
-  let i = 0
+  somefunction()
 
-  while (i < opt.times) {
-    somefunction()
-    i++
-  }
-
-  const diff = process.hrtime(startAt);
-
-  const time = diff[0] * 1e3 + diff[1] * 1e-6;
-
-  return time
+  const diff = process.hrtime(startAt)
+  const deltatime = parseFloat((diff[0] * 1e3 + diff[1] * 1e-6).toFixed(SETTINGS.PRECISION))
+  measures.push(deltatime)
+  return deltatime
 }
 
-module.exports.benchmarker = benchmarker
+const smartMeasure = function (somefunction = Function(), timeout = 1000) {
+  setTimeout(() => {
+    console.log(measure(somefunction))
+  }, timeout);
+}
+
+module.exports = {
+  getMeasures,
+  clearMeasures,
+  getPrecision,
+  setPrecision,
+  measure
+}
