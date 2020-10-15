@@ -1,7 +1,7 @@
 {
     "name": "devtools-benchmarker",
-    "version": "0.0.1",
-    "description": "tool for developers test function execution time",
+    "version": "0.0.4",
+    "description": "tool for developers test functions execution time",
     "main": "index.js",
     "keywords": [
         "node",
@@ -35,7 +35,6 @@
     },
     "homepage": "https://github.com/vivianeflowt/devtools-benchmarker#readme",
     "devDependencies": {
-        "faker": "5.1.0",
         "jest": "26.5.3",
         "prettier": "2.1.2"
     }

@@ -1,5 +1,7 @@
 const assert = require('assert')
+const benchmarker = require('../index')
 
-test('tests', () => {
-    assert.strictEqual(true, true)
+test('set precision', () => {
+    benchmarker.setPrecision(10)
+    assert.strictEqual(benchmarker.getPrecision(), 10)
 })

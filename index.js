@@ -4,8 +4,8 @@
  * Licensed under the MIT license.
  */
 
-const benchmarker = require('./src/benchmarker')
+'use strict'
 
-module.exports.benchmarker = benchmarker.measure
+const benchmarker = require('./src/benchmarker')
 
 module.exports = benchmarker
