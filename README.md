@@ -17,7 +17,7 @@ yarn add devtools-benchmarker
 ### Usage
 
 ```js
-const benchmarker = require(devtools-benchmarker)
+const benchmarker = require('devtools-benchmarker')
 
 // Function to Test
 const somefunction = function () {
