@@ -1,0 +1,16 @@
+.history
+.DS_Store
+.idea
+Thumbs.db
+tmp/
+temp/
+*.log
+*.tmp
+debug.js
+test/
+.editorconfig
+.gitignore
+examples/
+docs/
+yarn.lock
+package-lock.json

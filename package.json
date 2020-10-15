@@ -1,0 +1,42 @@
+{
+    "name": "devtools-benchmarker",
+    "version": "0.0.1",
+    "description": "tool for developers test function execution time",
+    "main": "index.js",
+    "keywords": [
+        "node",
+        "js",
+        "javascript",
+        "function",
+        "test",
+        "measure",
+        "tests",
+        "benchmark",
+        "benchmarker"
+    ],
+    "scripts": {
+        "format": "npx prettier --write .",
+        "test": "jest"
+    },
+    "prettier": {
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vivianeflowt/devtools-benchmarker.git"
+    },
+    "author": "Viviane Florido <vivianeflowt@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vivianeflowt/devtools-benchmarker/issues"
+    },
+    "homepage": "https://github.com/vivianeflowt/devtools-benchmarker#readme",
+    "devDependencies": {
+        "faker": "5.1.0",
+        "jest": "26.5.3",
+        "prettier": "2.1.2"
+    }
+}
